@@ -1,0 +1,5 @@
+li.nav-item > button {
+    border: none;
+    background: transparent;
+    font-weight: 700;
+}

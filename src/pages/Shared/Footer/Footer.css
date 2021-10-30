@@ -1,0 +1,19 @@
+/* footer */
+.bottom-footer-area {
+    background-color: #0b131e;
+}
+
+p.copywrite-text {
+    margin-bottom: 0px;
+    color: #404b5a;
+}
+
+p.copywrite-text a {
+    text-decoration: none;
+}
+@media only screen and (max-width : 320px) {
+    /* footer */
+    p.copywrite-text {
+        text-align: center;
+    }
+}
