@@ -12,7 +12,7 @@ const Footer = () => {
             <p className="copywrite-text">
               Copyright ©2021 |{" "}
               <Link to="https://onlytarikul.com" target="_blank">
-                Tarikul Islam
+                Ujjal Deb
               </Link>
             </p>
           </div>

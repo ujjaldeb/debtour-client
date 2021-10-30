@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 import "./Service.css";
 
 const Service = (props) => {
-  const {_id, sName, sdescription, price, sImage, travel_time} = props.service;
+  const { _id, sName, sdescription, price, sImage, travel_time } = props.service;
   return (
     <div className="col-lg-4 col-md-6">
       <div className="single_place">
         <div className="thumb">
-          <img src={sImage} alt="img"/>
+          <img src={sImage} alt="img" />
           <span className="prise">${price}</span>
         </div>
         <div className="place_info">
@@ -16,7 +16,7 @@ const Service = (props) => {
           <p>{sdescription}</p>
           <div className="d-flex justify-content-between">
             <span className="d-flex justify-content-center align-items-center">
-              <Link to= {`/booking/${_id}`}>
+              <Link to={`/booking/${_id}`}>
                 <button className="btn btn-info">Book Now</button>
               </Link>
             </span>
