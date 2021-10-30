@@ -12,7 +12,7 @@ const Header = () => {
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container">
           <Link className="navbar-brand" to="/">
-            Deb Tour
+            Travelo
           </Link>
           <button
             className="navbar-toggler"

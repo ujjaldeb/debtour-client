@@ -4,16 +4,15 @@ import { useForm } from "react-hook-form";
 import "./AddService.css";
 
 const AddService = () => {
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit,reset } = useForm();
+
   const onSubmit = (data) => {
-    // console.log(data);
-    axios.post('http://localhost:5000/services', data)
-      .then(res => {
-        // console.log(res);
-        if (res.data.insertedId) {
-          alert('Added successfully');
+    axios.post("http://localhost:5000/services", data).then((res) => {
+        if(res.data.insertedId){
+            alert('Service added successfully');
+            reset();
         }
-      })
+    });
   };
 
   return (
@@ -28,7 +27,7 @@ const AddService = () => {
             >
               <input
                 {...register("sName", { required: true })}
-                placeholder="Servcie Name"
+                placeholder="Travel Spot"
               />
               <textarea
                 {...register("sdescription", { required: true })}
@@ -38,6 +37,11 @@ const AddService = () => {
                 type="number"
                 {...register("price", { required: true })}
                 placeholder="Price"
+              />
+              <input
+                type="number"
+                {...register("travel_time", { required: true })}
+                placeholder="Travel Time"
               />
               <input
                 type="url"

@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center; 
 }
-.post-form input, textarea {
+.post-form input, textarea, select {
     margin: 6px;
     padding: 10px;
 }

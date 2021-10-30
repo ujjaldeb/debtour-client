@@ -1,0 +1,14 @@
+.my-orders{
+    height: 100vh;
+}
+.single_place {
+    background-color: #eee;
+}
+.single_place {
+    background-color: #eee;
+    padding: 22px;
+    border-radius: 5px;
+}
+.single_place h2 {
+    font-size: 20px;
+}

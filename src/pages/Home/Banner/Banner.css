@@ -1,0 +1,64 @@
+/*
+* banner css
+*/
+.single-hero-slide {
+    background: url(https://i.ibb.co/477vMsn/hero.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 665px;
+}
+.hero-slides-content {
+    text-align: left;
+}
+.hero-slides-content h2 {
+    color: #fff;
+    font-size: 72px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.hero-slides-content h5 {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.medica-btn {
+    display: inline-block;
+    color: #fff;
+    background-color: transparent;
+    height: 60px;
+    padding: 0 30px;
+    line-height: 56px;
+    font-size: 14px;
+    min-width: 140px;
+    border: 2px solid #fff;
+    border-radius: 0;
+    font-weight: 600;
+}
+
+.medica-btn.btn-2 {
+    color: #fff;
+    background-color: #2f88fd;
+    border-color: #2f88fd;
+}
+
+@media only screen and (max-width : 320px) {
+    /* banner */
+    .single-hero-slide {
+        height: 400px;
+    }
+
+    .hero-slides-content h2 {
+        font-size: 30px;
+    }
+
+    .medica-btn {
+        height: 50px;
+        padding: 0 10px;
+        line-height: 46px;
+        font-size: 13px;
+        min-width: 100px;
+    }
+}
