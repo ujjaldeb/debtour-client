@@ -1,6 +1,6 @@
 # Getting Started with Deb Tour
 
-This project was bootstrapped with [Deb Tour](https://debtour-client-side.web.app/).
+Project Live URL: [Deb Tour](https://debtour-client-side.web.app/).
 
 ## The features of project are:
 
