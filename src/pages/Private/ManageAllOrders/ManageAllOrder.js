@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import useOrders from "../../../Hooks/useOrders";
 
 const ManageAllOrder = () => {
@@ -24,7 +25,7 @@ const ManageAllOrder = () => {
                 <h2 className="my-5">Manage Orders</h2>
                 <div className="row gy-5">
                     {orders.map((order) => (
-                        <div className="col-lg-4 col-md-6">
+                        <div className="col-lg-4 col-md-6" key={order._id}>
                             <div className="single_place">
                                 <h2 className="my-3">
                                     <span className="fw-bold">Travel Spot: </span>
@@ -54,7 +55,9 @@ const ManageAllOrder = () => {
                                     </p>
                                 </div>
                                 <div className="d-flex justify-content-around">
-                                    <button className="btn btn-info">Order Update</button>
+                                    <Link to={`/orders/update/${order._id}`}>
+                                        <button className="btn btn-info">Order Update</button>
+                                    </Link>
                                     <button
                                         onClick={() => orderDeleteHandle(order._id)}
                                         className="btn btn-warning"

@@ -12,6 +12,7 @@ import './App.css';
 import AuthProvider from './Context/AuthProvider';
 import MyOrders from './pages/Private/MyOrders/MyOrders';
 import Services from './pages/Home/Services/Services';
+import UpdateOrder from './pages/Private/UpdateOrder/UpdateOrder';
 
 function App() {
   return (
@@ -40,6 +41,9 @@ function App() {
             </Route>
             <Route path="/manageAllOrders">
               <ManageAllOrder></ManageAllOrder>
+            </Route>
+            <Route path="/orders/update/:id">
+              <UpdateOrder></UpdateOrder>
             </Route>
             <Route path="/myOrders">
               <MyOrders></MyOrders>
