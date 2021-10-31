@@ -21,7 +21,7 @@ const Booking = () => {
 
   // data save for database
   const onSubmit = (data) => {
-    axios.post("http://localhost:5000/orders", data)
+    axios.post("https://guarded-caverns-85546.herokuapp.com/orders", data)
       .then((res) => {
         if (res.data.insertedId) {
           alert("Booking Submitted");

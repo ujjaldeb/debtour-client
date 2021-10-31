@@ -8,7 +8,7 @@ const MyOrders = () => {
 
     const orderDeleteHandle = (id) => {
         if (window.confirm("Do you want to delete?")) {
-            fetch(`http://localhost:5000/orders/${id}`, {
+            fetch(`https://guarded-caverns-85546.herokuapp.com/orders/${id}`, {
                 method: "DELETE",
             })
                 .then((res) => res.json())

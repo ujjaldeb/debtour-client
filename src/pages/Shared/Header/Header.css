@@ -3,3 +3,14 @@ li.nav-item > button {
     background: transparent;
     font-weight: 700;
 }
+
+@media screen and (max-width: 768px) {
+    button.nav-link {
+        width: 39%;
+        margin: auto;
+    }
+
+    li.nav-item.profile {
+        display: block !important 
+    }
+  }

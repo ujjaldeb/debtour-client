@@ -12,7 +12,7 @@ initializeAppAuthentication();
 const useFirebase = () => {
   const [user, setUser] = useState({});
   const [error, setError] = useState("");
-  const [isLocading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
 
   const auth = getAuth();
   const googleProvider = new GoogleAuthProvider();
@@ -52,7 +52,7 @@ const useFirebase = () => {
     setError,
     logout,
     signInUsingGoogle,
-    isLocading,
+    isLoading,
     setIsLoading,
     auth
   };

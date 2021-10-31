@@ -4,7 +4,7 @@ const useSingleService = (id) => {
   const [singleService, setSingleService] = useState({});
 
   useEffect(() => {
-    fetch(`http://localhost:5000/services/${id}`)
+    fetch(`https://guarded-caverns-85546.herokuapp.com/services/${id}`)
       .then((response) => response.json())
       .then((data) => setSingleService(data));
   }, []);

@@ -1,0 +1,16 @@
+.testimonial_area {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 100px 0 118px 0;
+    background: #f7fafd;
+}
+
+.testimonial_area .single_testmonial p {
+    color: #040E27;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    margin: 34px 0 10px 0;
+}

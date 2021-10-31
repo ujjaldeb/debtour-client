@@ -7,7 +7,7 @@ const ManageAllOrder = () => {
     // delete 
     const orderDeleteHandle = (id) => {
         if (window.confirm("Do you want to delete?")) {
-            fetch(`http://localhost:5000/orders/${id}`, {
+            fetch(`https://guarded-caverns-85546.herokuapp.com/orders/${id}`, {
                 method: "DELETE",
             })
                 .then((res) => res.json())
@@ -24,7 +24,7 @@ const ManageAllOrder = () => {
 
     const handleUpdateStatus = (id) => {
         if (window.confirm("Do you want update order status?")) {
-            fetch(`http://localhost:5000/orders/${id}`, {
+            fetch(`https://guarded-caverns-85546.herokuapp.com/orders/${id}`, {
                 method: "PUT",
                 headers: {
                     "content-type": "application/json",
@@ -40,7 +40,7 @@ const ManageAllOrder = () => {
 
     return (
         <>
-            <div className="container py-5">
+            <div className="container mb-5">
                 <h2 className="my-5">Manage Orders</h2>
                 <div className="row gy-5">
                     {orders.map((order) => (
