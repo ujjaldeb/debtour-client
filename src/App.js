@@ -42,9 +42,6 @@ function App() {
             <Route path="/manageAllOrders">
               <ManageAllOrder></ManageAllOrder>
             </Route>
-            <Route path="/orders/update/:id">
-              <UpdateOrder></UpdateOrder>
-            </Route>
             <Route path="/myOrders">
               <MyOrders></MyOrders>
             </Route>

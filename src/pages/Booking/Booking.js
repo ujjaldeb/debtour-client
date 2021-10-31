@@ -96,10 +96,12 @@ const Booking = () => {
                 {...register("address", { required: true })}
                 placeholder="Your Address"
               />
-              <select {...register("status", { required: true })} hidden>
-                <option value="pending">Pending</option>
-                <option value="approved">Approved</option>
-              </select>
+              <input
+                type="text"
+                {...register("status")}
+                defaultValue="Pending"
+                hidden
+              />
               <input type="submit" value="Book" />
               <br />
             </form>

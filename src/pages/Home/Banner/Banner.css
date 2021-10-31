@@ -2,14 +2,14 @@
 * banner css
 */
 .single-hero-slide {
-    background: url(https://i.ibb.co/477vMsn/hero.webp);
+    background: url('https://preview.colorlib.com/theme/travelo/img/place/x2.png.pagespeed.ic.oDyLMXogRU.webp');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 665px;
 }
 .hero-slides-content {
-    text-align: left;
+    text-align: center;
 }
 .hero-slides-content h2 {
     color: #fff;

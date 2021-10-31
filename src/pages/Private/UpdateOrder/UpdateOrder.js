@@ -11,18 +11,6 @@ const UpdateOrder = () => {
             .then(data => setOrder(data));
     }, []);
 
-    const handleTravelTimeChange = e => {
-        const updatedTravelTime = e.target.value;
-        const updatedOrder = { travel_time: updatedTravelTime, price: order.price, status: order.status };
-        setOrder(updatedOrder);
-    };
-
-    const handlePriceChange = e => {
-        const updatedPrice = e.target.value;
-        const updatedOrder = { travel_time: order.travel_time, price: updatedPrice, status: order.status };
-        setOrder(updatedOrder);
-    };
-
     const handleStatusChange = e => {
         const updatedStatus = e.target.value;
         const updatedOrder = { travel_time: order.travel_time, price: order.price, status: updatedStatus };
@@ -49,11 +37,12 @@ const UpdateOrder = () => {
 
     return (
         <div>
-            <h2>Update the order with id: {order._id}</h2>
+            <h2>Update the order below</h2>
             <form onSubmit={handleUpdateOrder}>
-                <input type="text" onChange={handleTravelTimeChange} value={order.travel_time || ''} />
-                <input type="text" onChange={handlePriceChange} value={order.price || ''} />
-                <input type="text" onChange={handleStatusChange} value={order.status || ''} />
+                <select onChange={handleStatusChange} value={order.status || ''}>
+                    <option value="pending">Pending</option>
+                    <option value="approved">Approved</option>
+                </select>
                 <input type="submit" value="Update" />
             </form>
         </div>

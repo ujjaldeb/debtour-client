@@ -1,10 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import useOrders from "../../../Hooks/useOrders";
 
 const ManageAllOrder = () => {
     const [orders, setOrders] = useOrders("");
 
+    // delete 
     const orderDeleteHandle = (id) => {
         if (window.confirm("Do you want to delete?")) {
             fetch(`http://localhost:5000/orders/${id}`, {
@@ -19,13 +19,32 @@ const ManageAllOrder = () => {
                 });
         }
     };
+
+    // update status
+
+    const handleUpdateStatus = (id) => {
+        if (window.confirm("Do you want update order status?")) {
+            fetch(`http://localhost:5000/orders/${id}`, {
+                method: "PUT",
+                headers: {
+                    "content-type": "application/json",
+                },
+                body: JSON.stringify({
+                    status: "Approved",
+                }),
+            })
+                .then((res) => res.json())
+                .then((data) => console.log(data));
+        }
+    };
+
     return (
         <>
             <div className="container py-5">
                 <h2 className="my-5">Manage Orders</h2>
                 <div className="row gy-5">
                     {orders.map((order) => (
-                        <div className="col-lg-4 col-md-6" key={order._id}>
+                        <div key={order._id} className="col-lg-4 col-md-6">
                             <div className="single_place">
                                 <h2 className="my-3">
                                     <span className="fw-bold">Travel Spot: </span>
@@ -55,9 +74,12 @@ const ManageAllOrder = () => {
                                     </p>
                                 </div>
                                 <div className="d-flex justify-content-around">
-                                    <Link to={`/orders/update/${order._id}`}>
-                                        <button className="btn btn-info">Order Update</button>
-                                    </Link>
+                                    <button
+                                        onClick={() => handleUpdateStatus(order._id)}
+                                        className="btn btn-info"
+                                    >
+                                        Order Update
+                                    </button>
                                     <button
                                         onClick={() => orderDeleteHandle(order._id)}
                                         className="btn btn-warning"
