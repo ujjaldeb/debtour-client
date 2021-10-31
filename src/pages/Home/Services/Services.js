@@ -21,7 +21,19 @@ const Services = () => {
                     </div>
                 </div>
                 <div className="row">
-                    {services.map(service => <Service key={service._id} service={service}></Service>)}
+                    {
+                        !services.length ? <>
+                            <div className="container">
+                                <div className="row">
+                                    <div className="col-lg-3 mx-auto">
+                                        <div className="spinner-border text-info" role="status">
+                                            <span className="visually-hidden">Loading...</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </> : <>{services.map(service => <Service key={service._id} service={service}></Service>)}</>
+                    }
                 </div>
             </div>
         </section>

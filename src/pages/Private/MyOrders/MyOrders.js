@@ -26,41 +26,53 @@ const MyOrders = () => {
             <div className="container my-orders">
                 <h2 className="my-5">My Orders</h2>
                 <div className="row gy-5">
-                    {orders.map((order) => (
-                        <div className="col-lg-4 col-md-6" key={order._id}>
-                            <div className="single_place">
-                                <h2>
-                                    <span className="fw-bold">Travel Spot:</span>{" "}
-                                    {order.tarvelSpot}
-                                </h2>
-                                <div className="d-flex justify-content-around">
-                                    <p>
-                                        {" "}
-                                        <span className="fw-bold">Price:</span> {order.price}
-                                    </p>
-                                    <p>
-                                        {" "}
-                                        <span className="fw-bold">Tarvel Time:</span>{" "}
-                                        {order.travel_time}
-                                    </p>
-                                </div>
-                                <div className="d-flex justify-content-around">
-                                    <p>
-                                        {" "}
-                                        <span className="fw-bold">Booking Status:</span>{" "}
-                                        {order.status}
-                                    </p>
-
-                                    <button
-                                        onClick={() => orderDeleteHandle(order._id)}
-                                        className="btn btn-warning"
-                                    >
-                                        Order Delete
-                                    </button>
+                    {!orders.length ? (
+                        <>
+                            <div className="col-lg-3 mx-auto">
+                                <div className="spinner-border text-info" role="status">
+                                    <span className="visually-hidden">Loading...</span>
                                 </div>
                             </div>
-                        </div>
-                    ))}
+                        </>
+                    ) : (
+                        <>
+                            {orders.map((order) => (
+                                <div className="col-lg-4 col-md-6" key={order._id}>
+                                    <div className="single_place">
+                                        <h2>
+                                            <span className="fw-bold">Travel Spot:</span>{" "}
+                                            {order.tarvelSpot}
+                                        </h2>
+                                        <div className="d-flex justify-content-around">
+                                            <p>
+                                                {" "}
+                                                <span className="fw-bold">Price:</span> {order.price}
+                                            </p>
+                                            <p>
+                                                {" "}
+                                                <span className="fw-bold">Tarvel Time:</span>{" "}
+                                                {order.travel_time}
+                                            </p>
+                                        </div>
+                                        <div className="d-flex justify-content-around">
+                                            <p>
+                                                {" "}
+                                                <span className="fw-bold">Booking Status:</span>{" "}
+                                                {order.status}
+                                            </p>
+
+                                            <button
+                                                onClick={() => orderDeleteHandle(order._id)}
+                                                className="btn btn-warning"
+                                            >
+                                                Order Delete
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </>
+                    )}
                 </div>
             </div>
         </>
